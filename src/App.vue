@@ -1,26 +1,55 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="app">
+    <app-accordion class="accordion">
+      <template v-slot:title>
+        <span class="text">Accordion 1</span>
+      </template>
+      <template v-slot:content>
+        <p>
+          <b>Lorem</b>, ipsum dolor sit amet consectetur adipisicing elit. Quia,
+          porro. Non a excepturi, voluptatibus ipsam magnam, eligendi,
+          accusantium ipsa quae quis praesentium voluptate saepe ullam sint ea
+          itaque consectetur impedit?
+        </p>
+      </template>
+    </app-accordion>
+
+    <app-accordion class="accordion">
+      <template v-slot:title>
+        <span class="text">Accordion 2</span>
+      </template>
+      <template v-slot:content>
+        <p>
+          <b>Lorem</b>, ipsum dolor sit amet consectetur adipisicing elit. Quia,
+          porro. Non a excepturi, voluptatibus ipsam magnam, eligendi,
+          accusantium ipsa quae quis praesentium voluptate saepe ullam sint ea
+          itaque consectetur impedit?
+        </p>
+      </template>
+    </app-accordion>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppAccordion from "./components/AppAccordion";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    AppAccordion,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.app{
+  padding:15px;
+}
+.accordion{
+  margin-bottom: 30px;
+}
+.text{
+  font-size: 1.25em;
+  font-weight: 600;
 }
 </style>
